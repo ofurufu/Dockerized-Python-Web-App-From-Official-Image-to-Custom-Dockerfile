@@ -1,5 +1,3 @@
-# Dockerized-Python-Web-App-From-Official-Image-to-Custom-Dockerfile
-
 # Dockerized Python Web App
 
 ## Project summary
