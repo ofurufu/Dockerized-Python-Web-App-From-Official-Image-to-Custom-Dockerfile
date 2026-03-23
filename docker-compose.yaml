@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: .
+    container_name: docker-mini-web
+    ports:
+      - "5000:5000"
+    environment:
+      APP_ENV: development
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DATA_DIR: /app/data
+    volumes:
+      - app_data:/app/data
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: docker-mini-redis
+
+volumes:
+  app_data:
