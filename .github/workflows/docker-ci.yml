@@ -7,11 +7,30 @@ on:
       - main
 
 env:
-  IMAGE_NAME: ofurufu/dockerized-python-web-application
+  IMAGE_NAME: yourdockerhubusername/dockerized-python-web-application
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Validate build configuration
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          call: check
+
   docker:
     runs-on: ubuntu-latest
+    needs: check
     permissions:
       contents: read
 
