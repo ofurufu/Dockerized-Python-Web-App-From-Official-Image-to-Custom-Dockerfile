@@ -1,7 +1,7 @@
 # Dockerized Python Web Application  
 ### From Single-Container Build to Multi-Container Production-Style Stack
 
-A production-minded Docker project that demonstrates the evolution of a Python Flask application from a basic single-container deployment into a multi-container application stack using Docker Compose, Redis, persistent Docker volumes, optimized image builds, and CI-based image delivery.
+A production-minded Docker project that demonstrates the evolution of a Python Flask application from a basic single-container deployment into a multi-container application stack using Docker Compose, Redis, persistent Docker volumes, optimized image builds, and CI-based image delivery
 
 This project was built as part of my hands-on DevOps learning journey to strengthen practical skills in containerization, service orchestration, image optimization, runtime hardening, and Docker-based CI/CD workflows.
 
